@@ -44,6 +44,30 @@ body {
   margin: 0;
   padding: 0;
 }
+
+#nav ul li {
+position: relative;
+padding: 3px 20px; /* Adjust as needed */
+}
+#nav ul li:before,
+#nav ul li:after {
+content: "";
+position: absolute;
+top: 0;
+height: 100%;
+width: 2px; /* Width of the vertical line */
+background-color: black; /* Color of the vertical line */
+}
+#nav ul li:before {
+    left: 0;
+}
+
+#nav ul li:after {
+    right: 0;
+	border-left: 2px solid black; /* Add a border to the left side to "close" the line */
+}
+
+
 #nav li {
   font-size: 80%;
   border-bottom: 1px dotted #B2BCC6;
@@ -72,8 +96,5 @@ h1 {
   line-height: 1.6em; 
 } 
 
-table { border-collapse:collapse; }
-table, th, td { border-style:solid; border-width:1px; }
-th, td { padding-left:10px; padding-right:10px; }
-th { color: green; text-align: left; }
-td { color: blue; text-align: left; }
+
+

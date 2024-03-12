@@ -1,0 +1,54 @@
+/* index1styles.css */
+
+body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      .bg {
+        background-image: url("images/chloe03.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+#header {
+    background-color: rgba(0, 0, 0, 0.5); /* Apply overlay to the header */
+    color: #fff;
+    padding: 20px;
+}
+
+#content {
+    padding: 20px;
+    color: #fff; /* Set text color to light for better contrast */
+}
+
+img {
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+table {
+    display: none;
+}
+
+#note {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#note p {
+    margin: 0;
+}
+
+#nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Add more styles as needed */

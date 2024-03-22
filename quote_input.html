@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset='UTF-8'>
+<title>Quote Input Form Example </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<style>
+body {
+  margin: 20px auto;
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+h4 {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #214252;
+}
+
+form{
+  margin: 20px;
+}
+
+p.note {
+  font-size: 1rem;
+  color: red;
+}
+input, textarea, select {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  padding: 8px;
+  margin-bottom: 8px;
+  font-family: sans-serif;;
+  font-size: 16px;
+  width: 320px;
+  vertical-align: middle;
+}
+label {
+  font-family: sans-serif;
+  font-size: 16px;
+  width: 70px;
+  display: inline-block;
+}
+input[type=submit] {
+  background-color: #214252;
+  color: white;
+  width: 120px;
+  padding: 8px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  margin-left: -4px;
+}
+
+input[type=submit]:hover {
+  background-color: #92817a;
+}
+
+textarea {
+  resize: none;
+}
+</style>
+</head>
+<body>
+<div>
+<h4>Enter a new quote:</h4>
+<form method="post" action="append_csv.php">
+  <label for="quote">quote: </label>
+  <textarea id="quote" name="quote" placeholder="Enter a quote ..."  maxlength="1200" rows="3" required="required"></textarea>
+  <br>
+  <label for="source">source: </label>
+  <input type="text" id="source" name="source" placeholder="Joe Bloggs" pattern=".{6,48}" required="required">
+  <br>
+  <label for="dob">dob: </label>
+  <input type="text" id="dob" name="dob" placeholder="237 BC" pattern=".{4,16}" required="required">
+  <br>
+  <label for="dod">dod: </label>
+  <input type="text" id="dod" name="dod" placeholder="2020" pattern=".{4,16}">
+  <br>
+  <label for="wplink">wplink: </label>
+  <input type="url" id="wplink" name="wplink" placeholder="https://en.wikipedia.org/wiki/" pattern="https:\/\/en\.wikipedia\.org\/wiki\/.+]+)" required="required">
+  <br>
+  <label for="wpimg">wpimg: </label>
+  <input type="url" id="wpimg" name="wpimg" placeholder="https://.wikimedia.org/wikimedia/commons/" pattern="https:\/\/upload.wikimedia.org\/wikipedia\/commons\/.+)" required="required">
+  <br/>
+  <label for="">category:</label>
+  <select name="category" id="category">
+    <option value="culture">culture</option>
+	<option value="education">education</option>
+	<option value="history">history</option>
+	<option value="humour">humour</option>
+	<option value="love">love</option>
+	<option value="philosophy">philosophy</option>
+    <option value="politics">politics</option>
+    <option value="science">science</option>
+  </select>
+  <br/><br/>
+  <input type="submit" value="submit">
+</form>
+</div>
+</body>
+</html>
